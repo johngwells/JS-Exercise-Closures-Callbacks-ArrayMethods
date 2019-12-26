@@ -67,8 +67,9 @@ function processLength(arrayList, callback) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
+function processLastItem(arrayList, callback) {
   /* CODE HERE */
+  return callback(arrayList[arrayList.length - 1]);
 }
 
 /**
