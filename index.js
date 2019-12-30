@@ -141,6 +141,7 @@ function processProduct(num1, num2, callback) {
 */
 function processContains(item, list, callback) {
   /* CODE HERE */
+  return callback(list.includes(item));
 }
 
 /**
