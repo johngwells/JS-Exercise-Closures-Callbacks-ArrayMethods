@@ -15,7 +15,7 @@
  * should return 'foofoo'.
 */
 function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
+  return callback(stringList[0]);
 }
 
 // ⭐️ Example Challenge END ⭐️
@@ -191,7 +191,7 @@ function getFullNames(runners) {
   // console.log(runners);
   runners.forEach((runner) => {
     firstLast.push(runner.last_name + ', ' + runner.first_name);
-  })
+  });
   return firstLast;
 }
 
@@ -207,8 +207,14 @@ function getFullNames(runners) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+  let firstName = [];
+  runners.map((runner) => {
+    firstName.push(runner.first_name);
+  });
+  return firstName.map((x) => {
+    return x.toUpperCase();
+  });
 }
 
 /**
@@ -224,8 +230,13 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
+function getRunnersByTShirtSize(runners, size) {
   /* CODE HERE */
+  return shirts = runners.filter((runner) => {
+    if (runner.shirt_size === size) {
+      return runner.shirt_size;
+    }
+  });
 }
 
 /**
