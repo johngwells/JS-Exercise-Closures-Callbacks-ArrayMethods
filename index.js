@@ -185,8 +185,14 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
   /* CODE HERE */
+  let firstLast = [];
+  // console.log(runners);
+  runners.forEach((runner) => {
+    firstLast.push(runner.last_name + ', ' + runner.first_name);
+  })
+  return firstLast;
 }
 
 /**
