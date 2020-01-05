@@ -277,12 +277,11 @@ function tallyUpDonations(runners) {
  * etc
 */
 function counterMaker() {
-  // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+  let count;
+  return function counter() {
+    ++count;
   }
-  // BROKEN CODE ENDS
+  return count;
 }
 
 /**
